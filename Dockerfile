@@ -2,8 +2,8 @@ FROM debian:bullseye-slim AS builder
 ENV NODEJS_MAJOR=16
 
 ARG DEBIAN_FRONTEND=noninteractive
-LABEL MAINTAINER="Key Networks https://key-networks.com"
-LABEL Description="ztncui (a ZeroTier network controller user interface) + ZeroTier network controller"
+LABEL MAINTAINER="Codesec Networks https://codesecure.in"
+LABEL Description="codesec (a Codesec network controller user interface) + Codesec network controller"
 ADD VERSION .
 
 # BUILD ZTNCUI IN FIRST STAGE
@@ -14,7 +14,7 @@ RUN apt update -y && \
     bash node_inst.sh && \
     apt install -y nodejs --no-install-recommends && \
     rm -f node_inst.sh && \
-    git clone https://github.com/Shad0w-D0rk3R/codesec-network && \
+    git clone https://github.com/Shad0w-D0rk3R/ztncui && \
     npm install -g node-gyp pkg && \
     cd ztncui/src && \
     npm install && \
