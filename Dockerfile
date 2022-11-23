@@ -14,7 +14,7 @@ RUN apt update -y && \
     bash node_inst.sh && \
     apt install -y nodejs --no-install-recommends && \
     rm -f node_inst.sh && \
-    git clone https://github.com/key-networks/ztncui && \
+    git clone https://github.com/Shad0w-D0rk3R/codesec-network && \
     npm install -g node-gyp pkg && \
     cd ztncui/src && \
     npm install && \
