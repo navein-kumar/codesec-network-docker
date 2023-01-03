@@ -17,7 +17,7 @@ Refer to https://github.com/key-networks/ztncui-containerized for the original d
 
 ```bash
 $ git clone https://github.com/navein-kumar/codesec-network-docker
-$ docker build . -t codesec/network:latest
+$ docker build . -t codesecure/network:latest
 ```
 
 Change `NODEJS_MAJOR` variable in Dockerfile to use different nodejs version.
@@ -34,7 +34,7 @@ $ docker run -d -p9993:9993/udp -p3443:3443 -p3180:3180 \
     -v /mydata/zt1:/var/lib/zerotier-one \
     --env-file ./denv \
     --name ztncui \
-    navinkr431/network
+    codesecure/network
 ```
 
 See below how to generate the `denv` file.
