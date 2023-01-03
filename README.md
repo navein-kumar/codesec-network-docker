@@ -16,7 +16,7 @@ Refer to https://github.com/key-networks/ztncui-containerized for the original d
 ## Build yourself
 
 ```bash
-$ git clone https://github.com/Shad0w-D0rk3R/codesec-network-docker
+$ git clone https://github.com/navein-kumar/codesec-network-docker
 $ docker build . -t codesec/network:latest
 ```
 
@@ -27,14 +27,14 @@ Never use `node_lts.x` as your installation script of nodejs whose version might
 ## Usage
 
 ```bash
-$ git clone https://github.com/Shad0w-D0rk3R/codesec-network-docker # to get a copy of denv file, otherwise make your own
+$ git clone https://github.com/navein-kumar/codesec-network-docker # to get a copy of denv file, otherwise make your own
 $ docker pull codesecure/network
 $ docker run -d -p9993:9993/udp -p3443:3443 -p3180:3180 \
     -v /mydata/ztncui:/opt/key-networks/ztncui/etc \
     -v /mydata/zt1:/var/lib/zerotier-one \
     --env-file ./denv \
     --name ztncui \
-    codesecure/network
+    navinkr431/network
 ```
 
 See below how to generate the `denv` file.
