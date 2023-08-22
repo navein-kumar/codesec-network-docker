@@ -29,11 +29,11 @@ Never use `node_lts.x` as your installation script of nodejs whose version might
 ```bash
 $ git clone https://github.com/navein-kumar/codesec-network-docker # to get a copy of denv file, otherwise make your own
 $ docker pull codesecure/network
-$ docker run -d -p9993:9993/udp -p3443:3443 -p3180:3180 \
+$ docker run -d -p9993:9993/udp -p60443:3443 -p3180:3180 \
     -v /mydata/ztncui:/opt/key-networks/ztncui/etc \
     -v /mydata/zt1:/var/lib/zerotier-one \
     --env-file ./denv \
-    --name ztncui \
+    --name codesecnetwork \
     codesecure/network
 ```
 
