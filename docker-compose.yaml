@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  codesecnetwork:
+    image: codesecure/network
+    container_name: codesecnetwork
+    restart: always
+    ports:
+      - "9993/udp"
+      - "3443"
+      - "3180"
+    volumes:
+      - ./mydata/ztncui:/opt/key-networks/ztncui/etc
+      - ./mydata/zt1:/var/lib/zerotier-one
+    env_file:
+      - ./denv
+    networks:
+      - nginxproxy_nginx_proxy
+
+networks:
+  nginxproxy_nginx_proxy:
+    external: true
